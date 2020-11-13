@@ -22,8 +22,39 @@ Next, enter the number corresponding to the pokemon you would like to choose.
 Repeat the last two steps for player 2. Enter player name, and choose your pokemon.  
   
   
-**Pick Attack Move**  
-Now, input the number corresponding to the attack move you would like to attack with.  
-<img src="https://media.giphy.com/media/SIgkf95i3cenzJj1T2/giphy.gif" width="600" alt="pick attack"/>.  
+**Player 1 Pick Attack Move**  
+Now, Player one will input the number corresponding to the attack move they would like to attack with.  
+<img src="https://media.giphy.com/media/SIgkf95i3cenzJj1T2/giphy.gif" width="600" alt="pick attack"/>  
+  
+  
+**Player 2 Pick Attack Move**  
+Then, Player Two will input the number corresponding to the attack move they would like to attack with.  
+<img src="https://media.giphy.com/media/l2lEaI9rZk2wSxYlrh/giphy.gif" width="600" alt="pick attack2"/>  
+  
+  
+**Victory Page**  
+Repeat the attack prompts until someone wins. The following victory page will then appear automatically.  
+<img src="https://media.giphy.com/media/hBKQqeUv38zWmuUywJ/giphy.gif" width="600" alt="victory page"/>  
+  
+  
+## Contributors
+- <a href="https://github.com/pabloalonso-20">Pablo Alonso</a>  
+  
+  
+## Getting Started  
+  
+### Requirements  
+Need a Java JRE installed in device to run the java program  
+  
+### How to run  
+- Use your terminal to 'git clone' the program.
+- Once the project is opened, build it using your IDE.
+- Click run.
+  
+
+
+  
+  
+
   
 
