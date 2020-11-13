@@ -36,25 +36,25 @@ public class Menu {
         int choice = scanner.nextInt();
         switch(choice){
             case 1:
-                Pikachu pikachu = new Pikachu(180);
+                Pikachu pikachu = new Pikachu(140);
                 System.out.println("You have chosen Pikachu!");
                 pikachu.printPokemon();
                 pikachu.makeSound();
                 return pikachu;
             case 2:
-                Bulbasaur bulbasaur = new Bulbasaur(200);
+                Bulbasaur bulbasaur = new Bulbasaur(155);
                 System.out.println("You have chosen Bulbasaur!");
                 bulbasaur.printPokemon();
                 bulbasaur.makeSound();
                 return bulbasaur;
             case 3:
-                Vulpix vulpix = new Vulpix(190);
+                Vulpix vulpix = new Vulpix(150);
                 System.out.println("You have chosen Vulpix");
                 vulpix.printPokemon();
                 vulpix.makeSound();
                 return vulpix;
             default:
-                Pikachu pikachu1 = new Pikachu(180);
+                Pikachu pikachu1 = new Pikachu(140);
                 return pikachu1;
         }
     }
