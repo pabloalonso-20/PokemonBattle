@@ -8,9 +8,10 @@ public class Vulpix implements Pokemon {
 
 
     Move flamethrower = new Move("Flamethrower", 40, "Fire");
+    Move quickAttack = new Move("Quick Attack", 40, "Normal");
     Move fireSpin = new Move("Fire Spin", 30, "Fire");
     Move fireBlast = new Move("Fire Blast", 50, "Fire");
-    Move quickAttack = new Move("Quick Attack", 40, "Normal");
+
 
     public Vulpix(int health){
         this.health = health;

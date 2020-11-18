@@ -32,7 +32,32 @@ public class VulpixTest {
         String actual = vulpix.getType();
         assertEquals(expect,actual);
     }
-    
+    @Test
+    void attackOneTestGivenFullHealth(){
+        int expected = 60;
+        int actual = vulpix.attackOne(vulpix,1).getHealth();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void attackTwoTestGivenFullHealth(){
+        int expected = 60;
+        int actual = vulpix.attackTwo(vulpix,1).getHealth();
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    void attackThreeTestGivenFullHealth(){
+        int expected = 70;
+        int actual = vulpix.attackThree(vulpix,1).getHealth();
+        assertEquals(expected, actual);
+    }
+    @Test
+    void attackFourTestGivenFullHealth(){
+        int expected = 50;
+        int actual = vulpix.attackFour(vulpix,1).getHealth();
+        assertEquals(expected, actual);
+    }
 
 
 }
