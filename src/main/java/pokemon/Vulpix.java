@@ -2,7 +2,9 @@ package pokemon;
 
 public class Vulpix implements Pokemon {
     private String name = "Vulpix";
-    private int health = 185;
+    private int health = 200;
+    private String type = "Fire";
+    private String weakness = "Water";
 
 
     Move flamethrower = new Move("Flamethrower", 40, "Fire");
@@ -62,6 +64,37 @@ public class Vulpix implements Pokemon {
     }
 
     @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public String getWeakness() {
+        return weakness;
+    }
+
+    @Override
+    public String moveTypeOne() {
+        return flamethrower.getDescription();
+    }
+
+    @Override
+    public String moveTypeTwo() {
+        return quickAttack.getDescription();
+    }
+
+    @Override
+    public String moveTypeThree() {
+        return fireSpin.getDescription();
+    }
+
+    @Override
+    public String moveTypeFour() {
+        return fireBlast.getDescription();
+    }
+
+
+    @Override
     public void makeSound() {
         System.out.println("Vulpix, Vulpix!");
     }
@@ -72,26 +105,26 @@ public class Vulpix implements Pokemon {
     }
 
     @Override
-    public Pokemon attackOne(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - flamethrower.getDamage());
+    public Pokemon attackOne(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (flamethrower.getDamage() * effective)));
         return pokemon;
     }
 
     @Override
-    public Pokemon attackTwo(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - quickAttack.getDamage());
+    public Pokemon attackTwo(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (quickAttack.getDamage() * effective)));
         return pokemon;
     }
 
     @Override
-    public Pokemon attackThree(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - fireSpin.getDamage());
+    public Pokemon attackThree(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (fireSpin.getDamage() * effective)));
         return pokemon;
     }
 
     @Override
-    public Pokemon attackFour(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - fireBlast.getDamage());
+    public Pokemon attackFour(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (fireBlast.getDamage() * effective)));
         return pokemon;
     }
 }

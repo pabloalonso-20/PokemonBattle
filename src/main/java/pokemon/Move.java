@@ -3,12 +3,12 @@ package pokemon;
 public class Move {
     private String name;
     private int damage;
-    private String type;
+    private String moveType;
 
     public Move(String name, int damage, String type) {
         this.name = name;
         this.damage = damage;
-        this.type = type;
+        this.moveType = type;
     }
 
 //getters and setters
@@ -30,10 +30,10 @@ public class Move {
     }
 
     public String getDescription() {
-        return type;
+        return moveType;
     }
 
     public void setDescription(String type) {
-        this.type = type;
+        this.moveType = type;
     }
 }

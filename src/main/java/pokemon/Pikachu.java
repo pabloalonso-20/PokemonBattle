@@ -5,6 +5,8 @@ package pokemon;
 public class Pikachu implements Pokemon {
     private String name = "Pikachu";
     private int health;
+    private String type = "Electric";
+    private String weakness = "Rock";
 
 
     Move thunderbolt = new Move("Thunderbolt", 40, "Electric");
@@ -20,6 +22,36 @@ public class Pikachu implements Pokemon {
     @Override
     public String getName() {
         return name;
+    }
+
+    @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public String getWeakness() {
+        return weakness;
+    }
+
+    @Override
+    public String moveTypeOne() {
+        return thunderbolt.getDescription();
+    }
+
+    @Override
+    public String moveTypeTwo() {
+        return ironTail.getDescription();
+    }
+
+    @Override
+    public String moveTypeThree() {
+        return voltTackle.getDescription();
+    }
+
+    @Override
+    public String moveTypeFour() {
+        return quickAttack.getDescription();
     }
 
     public void setName(String name) {
@@ -93,25 +125,25 @@ public class Pikachu implements Pokemon {
     //pikachu attack moves
 
     // thunderbolt
-    public Pokemon attackOne(Pokemon pokemon){
-        pokemon.setHealth(pokemon.getHealth() - thunderbolt.getDamage());
+    public Pokemon attackOne(Pokemon pokemon, float effective){
+        pokemon.setHealth((int) (pokemon.getHealth() - (thunderbolt.getDamage() * effective)));
         return pokemon;
     }
     // iron tail
-    public Pokemon attackTwo (Pokemon pokemon){
-        pokemon.setHealth(pokemon.getHealth() - ironTail.getDamage());
+    public Pokemon attackTwo (Pokemon pokemon, float effective){
+        pokemon.setHealth((int) (pokemon.getHealth() - (ironTail.getDamage() * effective)));
         return pokemon;
     }
 
     // volt tackle
-    public Pokemon attackThree(Pokemon pokemon){
-        pokemon.setHealth(pokemon.getHealth() - voltTackle.getDamage());
+    public Pokemon attackThree(Pokemon pokemon, float effective){
+        pokemon.setHealth((int) (pokemon.getHealth() - (voltTackle.getDamage() * effective)));
         return pokemon;
     }
 
     // quick attack
-    public Pokemon attackFour(Pokemon pokemon){
-        pokemon.setHealth(pokemon.getHealth() - quickAttack.getDamage());
+    public Pokemon attackFour(Pokemon pokemon, float effective){
+        pokemon.setHealth((int) (pokemon.getHealth() - (quickAttack.getDamage() * effective)));
         return pokemon;
     }
 

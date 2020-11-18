@@ -4,10 +4,12 @@ public class Bulbasaur implements Pokemon {
 
     private String name = "Bulbasaur";
     private int health;
+    private String type = "Grass";
+    private String weakness = "Fire";
 
-    Move solarBeam = new Move("Solar beam", 50, "Grass");
-    Move petalDance = new Move("Petal dance", 40, "Grass");
-    Move leechSeed = new Move("Leech seed", 20, "Grass");
+    Move solarBeam = new Move("Solar beam", 45, "Grass");
+    Move petalDance = new Move("Petal dance", 45, "Grass");
+    Move leechSeed = new Move("Leech seed", 25, "Grass");
     Move megaDrain = new Move("Mega drain", 35, "Grass");
 
 
@@ -63,6 +65,36 @@ public class Bulbasaur implements Pokemon {
     }
 
     @Override
+    public String getType() {
+        return type;
+    }
+
+    @Override
+    public String getWeakness() {
+        return weakness;
+    }
+
+    @Override
+    public String moveTypeOne() {
+        return solarBeam.getDescription();
+    }
+
+    @Override
+    public String moveTypeTwo() {
+        return petalDance.getDescription();
+    }
+
+    @Override
+    public String moveTypeThree() {
+        return leechSeed.getDescription();
+    }
+
+    @Override
+    public String moveTypeFour() {
+        return megaDrain.getDescription();
+    }
+
+    @Override
     public void makeSound() {
         System.out.println("Bulba, Bulbasaur!");
     }
@@ -73,26 +105,27 @@ public class Bulbasaur implements Pokemon {
     }
 
 
-    public Pokemon attackOne(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - solarBeam.getDamage());
+    public Pokemon attackOne(Pokemon pokemon, float effective) {
+
+        pokemon.setHealth((int) (pokemon.getHealth() - (solarBeam.getDamage() * effective)));
         return pokemon;
     }
 
 
-    public Pokemon attackTwo(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - petalDance.getDamage());
+    public Pokemon attackTwo(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (petalDance.getDamage() * effective)));
         return pokemon;
     }
 
 
-    public Pokemon attackThree(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - leechSeed.getDamage());
+    public Pokemon attackThree(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (leechSeed.getDamage() * effective)));
         return pokemon;
     }
 
 
-    public Pokemon attackFour(Pokemon pokemon) {
-        pokemon.setHealth(pokemon.getHealth() - megaDrain.getDamage());
+    public Pokemon attackFour(Pokemon pokemon, float effective) {
+        pokemon.setHealth((int) (pokemon.getHealth() - (megaDrain.getDamage() * effective)));
         return pokemon;
     }
 

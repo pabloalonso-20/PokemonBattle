@@ -57,24 +57,55 @@ public class Main {
 
             switch(choice){
                 case 1:
-                    player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon()));
-//                    player1.setPokemon(player2.getPokemon().attackOne(player2.getPokemon()));
+//                    player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon(),1));
+                    //checks for super effective moves
+                    if(player1.getPokemon().moveTypeOne().equals(player2.getPokemon().getWeakness())){
+                        player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon(),1.2f));
+                        System.out.println("Super Effective!");
+                    }
+                    else{
+                        player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon(),1));
+                    }
                     break;
                 case 2:
-                    player2.setPokemon(player1.getPokemon().attackTwo(player2.getPokemon()));
-//                    player1.setPokemon(player2.getPokemon().attackTwo(player2.getPokemon()));
+//                    player2.setPokemon(player1.getPokemon().attackTwo(player2.getPokemon(),1));
+                    if(player1.getPokemon().moveTypeTwo().equals(player2.getPokemon().getWeakness())){
+                        player2.setPokemon(player1.getPokemon().attackTwo(player2.getPokemon(),1.2f));
+                        System.out.println("Super Effective!");
+                    }
+                    else{
+                        player2.setPokemon(player1.getPokemon().attackTwo(player2.getPokemon(),1));
+                    }
                     break;
                 case 3:
-                    player2.setPokemon(player1.getPokemon().attackThree(player2.getPokemon()));
-//                    player1.setPokemon(player2.getPokemon().attackThree(player2.getPokemon()));
+//                    player2.setPokemon(player1.getPokemon().attackThree(player2.getPokemon(),1));
+                    if(player1.getPokemon().moveTypeThree().equals(player2.getPokemon().getWeakness())){
+                        player2.setPokemon(player1.getPokemon().attackThree(player2.getPokemon(),1.2f));
+                        System.out.println("Super Effective!");
+                    }
+                    else{
+                        player2.setPokemon(player1.getPokemon().attackThree(player2.getPokemon(),1));
+                    }
                     break;
                 case 4:
-                    player2.setPokemon(player1.getPokemon().attackFour(player2.getPokemon()));
-//                    player1.setPokemon(player2.getPokemon().attackFour(player2.getPokemon()));
+//                    player2.setPokemon(player1.getPokemon().attackFour(player2.getPokemon(),1));
+                    if(player1.getPokemon().moveTypeFour().equals(player2.getPokemon().getWeakness())){
+                        player2.setPokemon(player1.getPokemon().attackFour(player2.getPokemon(),1.2f));
+                        System.out.println("Super Effective!");
+                    }
+                    else{
+                        player2.setPokemon(player1.getPokemon().attackFour(player2.getPokemon(),1));
+                    }
                     break;
                 default:
-                    player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon()));
-//                    player1.setPokemon(player2.getPokemon().attackOne(player2.getPokemon()));
+//                    player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon(),1));
+                    if(player1.getPokemon().moveTypeOne().equals(player2.getPokemon().getWeakness())){
+                        player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon(),1.2f));
+                        System.out.println("Super Effective!");
+                    }
+                    else{
+                        player2.setPokemon(player1.getPokemon().attackOne(player2.getPokemon(),1));
+                    }
             }
             System.out.println(player2.getName() + "'s " + player2.getPokemon().getName() + " has " + player2.getPokemon().getHealth() + " health left.");
 
@@ -90,27 +121,57 @@ public class Main {
                 System.out.println(player2.getPokemon().getName() + ", attack!");
                 switch(choice){
                     case 1:
-                        player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon()));
-//                    System.out.println(player1.getPokemon().getHealth());
-                      //  player2.setPokemon(player1.getPokemon().attackOne(player1.getPokemon()));
+//                        player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon(),1));
+                        if(player2.getPokemon().moveTypeOne().equals(player1.getPokemon().getWeakness())){
+                            player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon(),1.2f));
+                            System.out.println("Super Effective!");
+                        }
+                        else{
+                            player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon(),1));
+                        }
+
                         break;
                     case 2:
-                        player1.setPokemon(player2.getPokemon().attackTwo(player1.getPokemon()));
-                       // player2.setPokemon(player1.getPokemon().attackTwo(player1.getPokemon()));
+//                        player1.setPokemon(player2.getPokemon().attackTwo(player1.getPokemon(),1));
+                        if(player2.getPokemon().moveTypeTwo().equals(player1.getPokemon().getWeakness())){
+                            player1.setPokemon(player2.getPokemon().attackTwo(player1.getPokemon(),1.2f));
+                            System.out.println("Super Effective!");
+                        }
+                        else{
+                            player1.setPokemon(player2.getPokemon().attackTwo(player1.getPokemon(),1));
+                        }
                         break;
                     case 3:
-                        player1.setPokemon(player2.getPokemon().attackThree(player1.getPokemon()));
-                        //player2.setPokemon(player1.getPokemon().attackThree(player1.getPokemon()));
+//                        player1.setPokemon(player2.getPokemon().attackThree(player1.getPokemon(),1));
+                        if(player2.getPokemon().moveTypeThree().equals(player1.getPokemon().getWeakness())){
+                            player1.setPokemon(player2.getPokemon().attackThree(player1.getPokemon(),1.2f));
+                            System.out.println("Super Effective!");
+                        }
+                        else{
+                            player1.setPokemon(player2.getPokemon().attackThree(player1.getPokemon(),1));
+                        }
                         break;
                     case 4:
-                        player1.setPokemon(player2.getPokemon().attackFour(player1.getPokemon()));
-                       // player2.setPokemon(player1.getPokemon().attackFour(player1.getPokemon()));
+//                        player1.setPokemon(player2.getPokemon().attackFour(player1.getPokemon(),1));
+                        if(player2.getPokemon().moveTypeFour().equals(player1.getPokemon().getWeakness())){
+                            player1.setPokemon(player2.getPokemon().attackFour(player1.getPokemon(),1.2f));
+                            System.out.println("Super Effective!");
+                        }
+                        else{
+                            player1.setPokemon(player2.getPokemon().attackFour(player1.getPokemon(),1));
+                        }
                         break;
                     default:
-                        player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon()));
-                      //  player2.setPokemon(player1.getPokemon().attackOne(player1.getPokemon()));
+//                        player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon(),1));
+                        if(player2.getPokemon().moveTypeOne().equals(player1.getPokemon().getWeakness())){
+                            player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon(),1.2f));
+                            System.out.println("Super Effective!");
+                        }
+                        else{
+                            player1.setPokemon(player2.getPokemon().attackOne(player1.getPokemon(),1));
+                        }
                 }
-                System.out.println(player1.getName() + "'s pokemon has " + player1.getPokemon().getHealth() + " health left.");
+                System.out.println(player1.getName() + "'s " + player1.getPokemon().getName() +" has " + player1.getPokemon().getHealth() + " health left.");
 
             }
 

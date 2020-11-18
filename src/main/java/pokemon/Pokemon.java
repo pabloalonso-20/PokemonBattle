@@ -7,6 +7,14 @@ public interface Pokemon {
     public int getHealth();
     public void setHealth(int health);
     public String getName();
+    public String getType();
+    public String getWeakness();
+
+    //pokemon move types
+    public String moveTypeOne();
+    public String moveTypeTwo();
+    public String moveTypeThree();
+    public String moveTypeFour();
 
     //sound
     public void makeSound();
@@ -14,10 +22,10 @@ public interface Pokemon {
     public void printMoveSet();
 
     //pokemon attacks
-    public Pokemon attackOne(Pokemon pokemon);
-    public Pokemon attackTwo(Pokemon pokemon);
-    public Pokemon attackThree(Pokemon pokemon);
-    public Pokemon attackFour(Pokemon pokemon);
+    public Pokemon attackOne(Pokemon pokemon, float effective);
+    public Pokemon attackTwo(Pokemon pokemon, float effective);
+    public Pokemon attackThree(Pokemon pokemon, float effective);
+    public Pokemon attackFour(Pokemon pokemon, float effective);
 
 
 

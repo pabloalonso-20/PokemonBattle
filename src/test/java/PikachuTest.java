@@ -13,29 +13,49 @@ public class PikachuTest {
     }
 
     @Test
-    void attackOneTestGivenFirstAttack(){
+    void testNameGetter(){
+        String expect = "Pikachu";
+        String actual = pikachu.getName();
+        assertEquals(expect,actual);
+    }
+
+    @Test
+    void testHealthGetter(){
+        int expect = 180;
+        int actual = pikachu.getHealth();
+        assertEquals(expect,actual);
+    }
+
+    @Test
+    void testTypeGetter(){
+        String expect = "Electric";
+        String actual = pikachu.getType();
+        assertEquals(expect,actual);
+    }
+    @Test
+    void attackOneTestGivenFullHealth(){
         int expected = 140;
-        int actual = pikachu.attackOne(pikachu).getHealth();
+        int actual = pikachu.attackOne(pikachu,1).getHealth();
         assertEquals(expected, actual);
     }
 
     @Test
-    void attackTwoTestGivenFirstAttack(){
+    void attackTwoTestGivenFullHealth(){
         int expected = 145;
-        int actual = pikachu.attackTwo(pikachu).getHealth();
+        int actual = pikachu.attackTwo(pikachu,1).getHealth();
         assertEquals(expected, actual);
     }
 
     @Test
-    void attackThreeTestGivenFirstAttack(){
+    void attackThreeTestGivenFullHealth(){
         int expected = 130;
-        int actual = pikachu.attackThree(pikachu).getHealth();
+        int actual = pikachu.attackThree(pikachu,1).getHealth();
         assertEquals(expected, actual);
     }
     @Test
-    void attackFourTestGivenFirstAttack(){
+    void attackFourTestGivenFullHealth(){
         int expected = 145;
-        int actual = pikachu.attackFour(pikachu).getHealth();
+        int actual = pikachu.attackFour(pikachu,1).getHealth();
         assertEquals(expected, actual);
     }
 
